@@ -3,6 +3,7 @@ import copy_reg
 
 import lsst.pex.logging as pexLog
 
+
 def pickleLog(log):
     """Pickle a log
 
@@ -14,6 +15,7 @@ def pickleLog(log):
 
 copy_reg.pickle(pexLog.Log, pickleLog)
 copy_reg.pickle(pexLog.ScreenLog, pickleLog)
+
 
 def jobLog(job):
     """Add a job-specific log destination"""
